@@ -150,12 +150,14 @@ gulp.task('lint:js', function () {
 });
 
 // add the tasks in separate files
-var watch = require('gulp-watch');
-gulp.task('watch',function () {
-     return watch('src/**/*.html',function(){
-       gulp.start('copy:index.html');
-    });
-});
+var requireDir = require('require-dir');
+requireDir('./gulp/tasks',{recurse:true});
+//var watch = require('gulp-watch');
+//gulp.task('watch',function () {
+//     return watch('src/**/*.html',function(){
+//       gulp.start('copy:index.html');
+//    });
+//});
 
 // ---------------------------------------------------------------------
 // | Main tasks                                                        |
