@@ -149,6 +149,13 @@ gulp.task('lint:js', function () {
       .pipe(plugins.jshint.reporter('fail'));
 });
 
+// add the tasks in separate files
+var watch = require('gulp-watch');
+gulp.task('watch',function () {
+     return watch('src/**/*.html',function(){
+       gulp.start('copy:index.html');
+    });
+});
 
 // ---------------------------------------------------------------------
 // | Main tasks                                                        |
@@ -169,4 +176,4 @@ gulp.task('build', function (done) {
     done);
 });
 
-gulp.task('default', ['build']);
+gulp.task('default', ['build','watch']);
