@@ -1,12 +1,12 @@
 # Default application configuration that all configurations inherit from.
 scss_files:
-  - "**/*.scss"
-  - "docs/assets/scss/**/*.scss"
+  - "**/*.less"
+  - "docs/assets/less/**/*.less"
 
 exclude:
-  - "scss/_normalize.scss"
+  - "less/_normalize.less"
 
-plugin_directories: ['.scss-linters']
+plugin_directories: ['.less-linters']
 
 # List of gem names to load custom linters from (make sure they are already
 # installed)
@@ -29,7 +29,7 @@ linters:
     enabled: true
     convention: zero # or `none`
     exclude:
-      - _normalize.scss
+      - _normalize.less
 
   ChainedClasses:
     enabled: false
@@ -43,8 +43,8 @@ linters:
   Comment:
     enabled: true
     exclude:
-      - _normalize.scss
-      - bootstrap.scss
+      - _normalize.less
+      - bootstrap.less
     style: silent
 
   DebugStatement:
@@ -109,7 +109,7 @@ linters:
     enabled: true
     style: exclude_zero # or 'include_zero'
     exclude:
-      - _normalize.scss
+      - _normalize.less
 
   MergeableSelector:
     enabled: false
@@ -139,7 +139,7 @@ linters:
     min_properties: 2
     separate_groups: false
     exclude:
-      - _normalize.scss
+      - _normalize.less
     order:
       - position
       - top
@@ -534,7 +534,7 @@ linters:
     additional_identifiers: []
     excluded_identifiers: []
     exclude:
-      - _normalize.scss
+      - _normalize.less
 
   ZeroUnit:
     enabled: true

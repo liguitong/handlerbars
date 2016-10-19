@@ -140,11 +140,11 @@ mark,
 
 @if not $enable-flex {
   // Clean up some horizontal `<dl>`s built with grids
-  // scss-lint:disable QualifyingElement
+  // less-lint:disable QualifyingElement
   dl.row {
     > dd + dt {
       clear: left;
     }
   }
-  // scss-lint:enable QualifyingElement
+  // less-lint:enable QualifyingElement
 }
