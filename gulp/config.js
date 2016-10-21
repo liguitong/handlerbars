@@ -15,7 +15,11 @@ module.exports={
         destsrc:src+'/css',
     },
     img:{
-        src:src+'/img/**/*.jpg',
+        src:src+'/img/**/*.{jpg,ico}',
         dest:dist+'/img'
+    },
+    css:{
+        src:src+'/css/**/*.css',
+        dest:dist+'/css'
     }
 };
