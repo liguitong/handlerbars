@@ -68,10 +68,12 @@ gulp.task('clean', function (done) {
 
 gulp.task('copy', [
     'copy:.htaccess',
-    'copy:index.html',
+    'copy:html',
+    'copy:img',
+    'copy:js',
     'copy:jquery',
     'copy:license',
-    'copy:main.css',
+    'copy:css',
     'copy:misc',
     'copy:normalize'
 ]);
@@ -122,8 +124,11 @@ gulp.task('copy:misc', function () {
 
         // Exclude the following files
         // (other tasks will handle the copying of these files)
-        '!' + dirs.src + '/css/main.css',
-        '!' + dirs.src + '/index.html'
+        '!'+dirs.src+'/js/**/*.js',
+        '!'+dirs.src+'/css/**/*.js',
+        '!'+dirs.src+'/img/**/*.{jpg,ico}',
+        '!'+dirs.src+'/**/*.{html,htm}',
+
 
     ], {
 

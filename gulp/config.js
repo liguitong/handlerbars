@@ -1,8 +1,9 @@
 var src = 'src';
 var dist = 'dist';
 module.exports={
-    watch:{
-        html:src+'/**/*.{html,htm}',
+    html:{
+        src:src+'/**/*.{html,htm}',
+        dest:dist+'/',
     },
     sass:{
         src:src+'/scss/**/*.scss',
@@ -21,5 +22,9 @@ module.exports={
     css:{
         src:src+'/css/**/*.css',
         dest:dist+'/css'
+    },
+    js:{
+        src:src+'/js/**/*.js',
+        dest:dist+'/js',
     }
 };
