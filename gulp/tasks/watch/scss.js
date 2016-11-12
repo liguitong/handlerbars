@@ -7,7 +7,7 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var config = require('../../config').sass;
 gulp.task('sass',function () {
-    return gulp.src(config.src)
+    return gulp.src(config.main)
         .pipe(sass())
         .pipe(gulp.dest(config.destsrc))
         .pipe(gulp.dest(config.dest));
