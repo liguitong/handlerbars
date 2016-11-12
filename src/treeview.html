@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,init-scale=1">
+    <title>Treeview Test</title>
+    <link rel="icon" href="./favicon.ico">
+    <meta name="author" content="lgt">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/treeview.css">
+</head>
+<body>
+<div id="tree" class="treeview">
+
+</div>
+<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+<script src="js/bootstrap.js"></script>
+<script src="js/vendor/holder.min.js"></script>
+<script src="../node_modules/bootstrap-treeview/src/js/bootstrap-treeview.js"></script>
+<script>
+    function getTree() {
+        var tree = [
+            {
+                text: "Parent 1",
+                nodes: [
+                    {
+                        text: "Child 1",
+                        nodes: [
+                            {
+                                text: "Grandchild 1"
+                            },
+                            {
+                                text: "Grandchild 2"
+                            }
+                        ]
+                    },
+                    {
+                        text: "Child 2"
+                    }
+                ]
+            },
+            {
+                text: "Parent 2"
+            },
+            {
+                text: "Parent 3"
+            },
+            {
+                text: "Parent 4"
+            },
+            {
+                text: "Parent 5"
+            }
+        ];
+        return tree;
+    }
+    $(function(){
+        debugger;
+        $('#tree').treeview({data:getTree()});
+    });
+</script>
+</body>
+
+</html>
