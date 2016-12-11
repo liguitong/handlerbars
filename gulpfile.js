@@ -125,7 +125,7 @@ gulp.task('copy:misc', function () {
         // Exclude the following files
         // (other tasks will handle the copying of these files)
         '!'+dirs.src+'/js/**/*.js',
-        '!'+dirs.src+'/css/**/*.js',
+        '!'+dirs.src+'/css/**/*.css',
         '!'+dirs.src+'/img/**/*.{jpg,ico}',
         '!'+dirs.src+'/**/*.{html,htm}',
 

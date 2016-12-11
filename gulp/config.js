@@ -9,7 +9,6 @@ module.exports={
         src:src+'/scss/**/*.scss',
         destsrc:src+'/css',
         dest:dist+'/css',
-        main:src+'/scss/main.scss'
     },
     less:{
         src:src+'/less/**/main.less',

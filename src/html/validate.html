@@ -2,37 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="the search component">
+    <meta name="validate" content="validate in html5">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/search.css">
-    <title>Search Component</title>
+    <title>validate</title>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <form class="form-inline" role="search">
-                <div class="form-group">
-                    <lable class="sr-only" for="srch-term">Search:</lable>
-                    <div class="input-group">
-                        <input type="search" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                        <div class="input-group-addon">.00</div>
-                    </div>
-
-                    <div class="history">
-                        <div class="history-item">Apple</div>
-                        <div class="history-item">Apple</div>
-                        <div class="history-item">Apple</div>
-                    </div>
-                </div>
-                <button class="btn btn-primary" type="submit">Search</button>
-            </form>
-        </div>
-    </div>
-</div>
+<h1>Just Test</h1>
+<form id="validate" action="result.html" method="get">
+    <label for="name">Name <em>*</em></label>
+    <input id="name" placeholder="Li Gui Tong" autofocus required><br>
+    <input type="submit" value="提交">
+</form>
 <script src="../js/vendor/jquery-{{JQUERY_VERSION}}.min.js"></script>
 <script>window.jQuery || document.write('<script src="../js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
 <script src="../js/bootstrap.js"></script>
